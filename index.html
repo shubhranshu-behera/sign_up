@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Form</title>
+  <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"></script>
+  
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Form</h1>
+  
+  <form method="post" action="process_form.php">
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" required><br><br>
+    
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name"><br><br>
+    
+    <label for="dob">Date Of Birth:</label>
+    <input type="text" id="dob" name="dob" required><br><br>
+    
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select><br><br>
+    
+    <label for="telephone">Telephone Number:</label>
+    <input type="tel" id="telephone" name="telephone" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function onSubmit(token) {
+      document.getElementById("userForm").submit();
+    }
+  </script>
+</body>
+</html>
