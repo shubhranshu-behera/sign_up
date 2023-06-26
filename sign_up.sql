@@ -1,6 +1,4 @@
-
--- <!-- This is created by SHUBHRANSHU SHEKHAR BEHERA
---  -->
+-- <!-- This is created by SHUBHRANSHU SHEKHAR BEHERA-->
 
 
 CREATE DATABASE sign_up;
